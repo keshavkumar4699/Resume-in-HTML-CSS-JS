@@ -1,0 +1,476 @@
+/* to reset css deafult settongs which may change for different browsers */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* Body Header */
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 0px;
+}
+
+@media screen and (max-width:600px){
+    body{
+        margin-top: -90px;
+    }
+    #name{
+        padding-top: 100px;
+    }
+}
+
+#body-header{
+    background-image: url(images/header_image.png);
+    height: 65vh;
+    opacity: 1;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* navigation pannel */
+#navigation-bar{
+    color: grey; 
+}
+
+.nav-menu{
+    padding-top: 5vh;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.nav-menu li{
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+}
+
+.nav-menu li a{
+    color: white;
+    text-decoration: none;
+    padding: 0% 10%;
+    transition: color 0.5s, border-bottom 1s;
+}
+
+.nav-menu li a:hover{
+    color: cyan;
+    /* border-bottom: 2px solid cyan; */
+}
+
+@media screen and (max-width:600px) {
+    .navbutton{
+        position: absolute;
+        right: 4%;
+        top: 4%;
+        color: lightgray;
+        height: 20px;
+        width: 20px;
+        background-color: rgb(40, 54, 54);
+        border-radius: 10%;
+    }
+
+    .navbutton:hover ~ .nav-menu{
+        display: block;
+    }
+
+    .navbutton:hover{
+        display: none;
+    }
+
+    .nav-menu{
+        display: none;
+        position: absolute;
+        top: -2%;
+        right: 4%;
+        width: 100px;
+        background-color: rgb(15, 15, 15);
+        border-radius: 2%;
+        opacity: 1;
+    }
+
+    .nav-menu:hover{
+        display: block;
+    }
+    
+    .nav-menu li{
+        display: block;
+        margin: 0;
+        padding: 5px 0px 5px 0px;
+        color: white;
+        text-decoration: none;
+        border-radius: 2%;
+        transition: background-color 0.5s, color 1s;
+    }
+    
+    .nav-menu li:hover{
+        background: rgb(44, 40, 34);
+        border-bottom: 2px solid wheat;
+    }
+
+    .nav-menu li a:hover{
+        opacity: 1;
+        color: wheat;
+    }
+}
+
+/* name */
+#name{
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 15vh;
+    text-shadow: 2px 2px 4px grey;
+}
+
+/* social media panel */
+
+.social-icons{
+    padding-top: 5vh;
+    list-style: none;
+}
+
+.social-icons li{
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+}
+
+.social-icons li a i{
+    color: lightgrey;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+
+.social-icons li a i:hover{
+    color: red;
+    box-shadow: 0px 0px 4px 2px white;
+}
+
+/* profile picture */
+#profile-pic img{
+    margin-top: -13vh;
+    border-radius: 50%;
+    size: 2rem;
+    /* border: 2px solid grey; */
+    box-shadow: 0px 0px 6px 4px white;
+}
+
+/* profile description */
+#profile-desc p{
+    margin: 5% 10%;
+    text-align:justify;
+    color: gray;
+}
+
+mark{
+    color: blue;
+    font-weight: 500;
+}
+
+/* skills section */
+.skills-display{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.skills-progress{
+    margin: 5px;
+    width: 10rem;
+    height: 1.4rem;
+    background-color: lightgray;
+    border-radius: 0.8rem;
+    padding-bottom: 3px;
+    box-shadow:inset 2px 2px 3px gray;
+    margin: 10px;
+}
+
+.skills-progress>div{
+    padding-bottom: 3px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 2px 0px 3px gray;
+}
+.eightfive-blue{
+    width: 85%;
+    height: inherit;
+    background-color: #1F6E8C;
+}
+
+.fifty-yellow{
+    width: 50%;
+    height: inherit;
+    background-color: #FBD85D;
+}
+
+.sevenfive-orange{
+    width: 75%;
+    height: inherit;
+    background-color: #F86F03;
+}
+
+.thirty-green{
+    width: 30%;
+    height: inherit;
+    background-color: #A0C49D;
+}
+
+.skill-name span{
+    color: white;
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
+/* work experience */
+.timeline{
+    position: relative;
+    width: 80%;
+    /* border: 2px solid black; */
+}
+
+.timeline-box{
+    position: relative;
+    width: 40%;
+    min-height: 150px;
+    margin: 6px;
+    /* border: 2px solid black; */
+}
+
+.timeline-box:nth-child(2n){
+    left: 56%;
+}
+
+.timeline-box ul::before{
+    content: '';
+    background-image: url(images/birlasoft-logo.jpg);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    background-size: contain;
+    border-radius: 4px;
+}
+
+.timeline-box ul{
+    list-style: none;
+}
+
+.timeline-box h2{
+    font-size: 0.9rem;
+    text-align: end;
+    color: rgb(17, 11, 104)
+}
+
+.timeline-box h3{
+    font-size: 0.7rem;
+    text-align: end;
+    color: rgb(214, 110, 25);
+}
+
+.timeline-box h4{
+    font-size: 0.7rem;
+    text-align: end;
+    font-weight: 500;
+    color: gray;
+}
+
+.timeline-box p{
+    font-size: 0.7rem ;
+    text-align: justify;
+    text-justify: inter-word;
+    color: gray;
+}
+
+.timeline-divider{
+    position: absolute;
+    height: 75%;
+    width: 0;
+    border: 2px dashed lightgray;
+    border-right: none;
+    top: 5%;
+    left: 50%;
+}
+
+.timeline-traveller{
+    top: 4%;
+    right: 15%;
+    position: sticky;
+    transform: rotate(90deg);
+    color: #0c387e;
+    z-index: 1;
+}
+
+@media screen and (max-width:600px) {
+    .timeline-divider{
+        left: 5%;
+    }
+
+    .timeline-box{
+        left: 10% !important;
+        width: 80%;
+    }
+}
+
+/* .timeline-box.timeline-box:nth-child(2n+1)::after{
+    content: '';
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 15%;
+    left: 120%;
+    background-color: lightgray;
+    position: absolute;
+}
+
+.timeline-box.timeline-box:nth-child(2n)::after{
+    content: '';
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 15%;
+    right: 115%;
+    background-color: lightgray;
+    position: absolute;
+} */
+
+/* education */
+
+/* portfolio section */
+.portfolio-display{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+.portfolio img{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 3px 3px 3px gray;
+}
+
+/* contact section */
+.contact-section{
+    background: linear-gradient(45deg, #2857a4, #403066);
+}
+
+.contact-section div{
+    color: white;
+}
+
+.contact-forms-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-forms-section>div{
+    flex-basis: 40%;
+    margin: 0% 5% 0%;
+}
+
+.get-in-touch{
+    font-size: 0.9rem;
+}
+
+.contact-forms-section h3{
+    font-size: 1rem;
+    margin: 10px 0px 5px;
+}
+
+.send-message input[type=text]{
+    width: 100%;
+    padding: 4px 8px;
+    margin: 4px 0;
+    color: white;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    border: 2px solid #2857a4;
+    background-color: #2857a4;
+    border-radius: 4px;
+    box-shadow: inset 3px 3px 3px #2857a4;
+}
+
+.send-message textarea{
+    width: 100%;
+    height: auto;
+    padding: 4px 8px;
+    margin: 4px 0;
+    color: white;
+    font-size: 0.9rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    border: 2px solid #2857a4;
+    background-color: #2857a4;
+    border-radius: 4px;
+    box-shadow: inset 3px 3px 3px #2857a4;
+}
+
+.send-message input[type=button]{
+    width: 50%;
+    padding: 4px 8px;
+    margin: 4px 0;
+    color: white;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    border: 2px solid #0c387e;
+    background-color: #0c387e;
+    border-radius: 4px;
+    box-shadow: inset 3px 3px 3px #0c387e;
+}
+
+.send-message input[type=button]:hover{
+    border: 2px solid #325fa8;
+    box-shadow: inset 3px 3px 3px #325fa8;
+    background-color: #325fa8;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-forms-section>div{
+        flex-basis: 80%;
+        margin: 0% 10% 0%;
+    }
+}
+
+/* general rule */
+.text-center{
+    text-align: center;
+}
+
+/* section*/
+main section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+main section:nth-child(2n+1){
+    background-color: white;
+}
+
+main section:nth-child(2n){
+    background-color: #EEEEEE;
+}
+
+.section-heading{
+    width: auto;
+    padding: 20px 10px 10px;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: darkblue;
+    margin: 5px;
+}
+
+.section:target{
+    background-color: darkgray;
+}
